@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import { loginRoute } from "./utils/APIRoutes";
@@ -17,7 +17,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 const theme = createTheme();
 
 function Login() {
-  const navigate = useNavigate();
   const [values, setValues] = useState({
     username: "",
     password: "",
