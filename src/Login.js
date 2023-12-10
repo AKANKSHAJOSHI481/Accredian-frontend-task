@@ -58,12 +58,11 @@ function Login() {
           password,
         })
         .then((res) => {
-          console.log("Line 61, ", res)
           console.log("Logged in Successfully !!")
           toast.success("Logged in Successfully !!", toastOptions);
       })
         .catch((err) => {
-          console.log("Line 65", err);
+          console.log( err);
           toast.error(err.response.data.msg, toastOptions);
         });
     }

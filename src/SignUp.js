@@ -38,17 +38,6 @@ function SignUp() {
     }));
   };
 
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault();
-  //   setErrors(Validation(values)); // Corrected function name from setErros to setErrors
-  //   if(errors.username === "" && errors.email === "" && errors.password === ""){
-  //     axios.post('http://localhost:8081/signup', values)
-  //     .then(res => {
-  //       navigate('/')
-  //     })
-  //     .catch(err => console.log(err))
-  //   }
-  // };
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (handleValidation()) {
@@ -83,23 +72,19 @@ function SignUp() {
     } else if (!email || email[0].trim() === "") {
       toast.error("Email is required.", toastOptions);
       return false;
-    } 
-    else if(!password || password[0].trim() === "") {
+    } else if (!password || password[0].trim() === "") {
       toast.error("Password is required.", toastOptions);
       return false;
-    }
-    else if(!confirmPassword || confirmPassword[0].trim() === "") {
+    } else if (!confirmPassword || confirmPassword[0].trim() === "") {
       toast.error("Confirm Password is required.", toastOptions);
       return false;
-    }
-    else if (password[0] !== confirmPassword[0]) {
+    } else if (password[0] !== confirmPassword[0]) {
       toast.error(
         "Password and confirm password should be same.",
         toastOptions
       );
       return false;
-    } 
-    else if (username[0].length < 3) {
+    } else if (username[0].length < 3) {
       toast.error(
         "Username should be greater than 3 characters.",
         toastOptions
