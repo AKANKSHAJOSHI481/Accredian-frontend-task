@@ -1,3 +1,9 @@
+# Hosted the Application on Netlify
+
+https://main--accredian-akankshajoshi.netlify.app/
+
+# Used toast to display the status of Login and SignUp
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
